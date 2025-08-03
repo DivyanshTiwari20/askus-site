@@ -34,9 +34,9 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { name: 'Services', href: '#' },
-    { name: 'About', href: '#' },
-    { name: 'Contact', href: '#' }
+    { name: 'Services', href: 'services' },
+    { name: 'About', href: 'about' },
+    { name: 'Contact', href: 'contact' }
   ];
 
   return (
@@ -58,13 +58,15 @@ const Navbar = () => {
       >
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <motion.div 
+          <motion.a
+            href="/"
             className="text-base xs:text-lg sm:text-xl md:text-2xl font-bold text-gray-900 tracking-tight"
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            style={{ cursor: "pointer" }}
           >
             .Askus
-          </motion.div>
+          </motion.a>
 
           {/* Desktop Navigation Items */}
           <div className="hidden md:flex items-center space-x-1 lg:space-x-2">

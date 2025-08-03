@@ -83,7 +83,7 @@ const StatsCards = () => {
                   </h3>
 
                   {/* Description */}
-                  <p className="text-gray-600 text-sm font-jakarta my-5">
+                  <p className="text-gray-600 text-md font-jakarta my-5">
                     {card.description}
                   </p>
                 </div>

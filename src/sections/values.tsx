@@ -128,7 +128,7 @@ const ValuesAndFooter: React.FC = () => {
         </div>
       </motion.section>
 
-      {/* Footer */}
+      {/* Footer
       <motion.footer
         className="bg-gray-900 text-white py-16"
         initial="hidden"
@@ -208,7 +208,7 @@ const ValuesAndFooter: React.FC = () => {
             ))}
           </div>
         </div>
-      </motion.footer>
+      </motion.footer> */}
     </div>
   );
 };

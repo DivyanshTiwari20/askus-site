@@ -49,18 +49,65 @@ body {
 }
 
 /* Font Utility Classes */
-.font-inter { font-family: var(--font-inter); }
-.font-poppins { font-family: var(--font-poppins); }
-.font-manrope { font-family: var(--font-manrope); }
-.font-jakarta { font-family: var(--font-jakarta); }
+.font-inter {
+  font-family: var(--font-inter);
+}
+
+.font-poppins {
+  font-family: var(--font-poppins);
+}
+
+.font-manrope {
+  font-family: var(--font-manrope);
+}
+
+.font-jakarta {
+  font-family: var(--font-jakarta);
+}
 
 /* Default max-w-6xl for all direct children of .page-container (to be used in _app or page layouts) */
-.page-container > * {
-  max-width: 72rem; /* 6xl in Tailwind = 1152px = 72rem */
+.page-container>* {
+  max-width: 72rem;
+  /* 6xl in Tailwind = 1152px = 72rem */
   margin-left: auto;
   margin-right: auto;
   width: 100%;
 }
+
+/* === START: CURSOR GRADIENT AURA (UPDATED) === */
+.cursor-gradient-aura {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  /* Made smaller */
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  /* Made more visible and darker */
+  background: radial-gradient(circle,
+      rgba(139, 92, 246, 0.5) 0%,
+      /* Increased opacity from 0.3 to 0.5 */
+      rgba(139, 92, 246, 0) 50%
+      /* Gradient fades faster to concentrate color */
+    );
+  /* Blur reduced slightly to make it less diffuse */
+  filter: blur(50px);
+  transform: translate(-50%, -50%);
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0;
+}
+
+/* Hides the effect on mobile/tablet */
+@media (hover: none) or (pointer: coarse) {
+  .cursor-gradient-aura {
+    display: none;
+  }
+}
+
+/* === END: CURSOR GRADIENT AURA === */
+
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
@@ -99,15 +146,41 @@ body {
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
   --animate-shine: shine var(--duration) infinite linear;
+
   @keyframes shine {
-  0% {
-    background-position: 0% 0%;
+    0% {
+      background-position: 0% 0%;
     }
-  50% {
-    background-position: 100% 100%;
+
+    50% {
+      background-position: 100% 100%;
     }
-  to {
-    background-position: 0% 0%;
+
+    to {
+      background-position: 0% 0%;
+    }
+  }
+
+  --animate-marquee: marquee var(--duration) infinite linear;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+
+  @keyframes marquee-vertical {
+    from {
+      transform: translateY(0);
+    }
+
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
     }
   }
 }
@@ -150,6 +223,7 @@ body {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }

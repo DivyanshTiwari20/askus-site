@@ -5,10 +5,11 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/sections/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/sections/**/*.{js,ts,jsx,tsx,mdx}", // Your custom path
   ],
   theme: {
     extend: {
+      // --- Start of Magic UI Marquee animation code ---
       animation: {
         marquee: "marquee var(--duration) linear infinite",
         "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
@@ -23,6 +24,7 @@ const config: Config = {
           to: { transform: "translateY(calc(-100% - var(--gap)))" },
         },
       },
+      // --- End of Magic UI Marquee animation code ---
     },
   },
   plugins: [],

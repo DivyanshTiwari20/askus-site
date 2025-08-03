@@ -1,4 +1,5 @@
-import Image from "next/image";
+"use client";
+
 import { cn } from "@/lib/utils";
 import { Marquee } from "@/components/magicui/marquee";
 
@@ -66,7 +67,7 @@ const ReviewCard = ({
       )}
     >
       <div className="flex flex-row items-center gap-2">
-        <Image className="rounded-full" width="32" height="32" alt="" src={img} />
+        <img className="rounded-full" width="32" height="32" alt="" src={img} />
         <div className="flex flex-col">
           <figcaption className="text-sm font-medium dark:text-white">
             {name}
@@ -79,9 +80,15 @@ const ReviewCard = ({
   );
 };
 
-const MarqueeDemo = () => {
+export function MarqueeDemo() {
+  // The most common reason the Marquee animation doesn't work is missing the "use client" directive at the top of the file.
+  // This is required for client-side interactivity and animation in Next.js app directory.
+  // Make sure your Marquee component from magicui is implemented correctly and supports animation.
+  // Also, ensure that your Tailwind config includes the necessary keyframes and animation utilities if Marquee relies on them.
+  // If you still have issues, check the Marquee component source for any required props or context.
+
   return (
-    <div className="relative mx-auto flex w-full max-w-6xl flex-col items-center justify-center overflow-hidden">
+    <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
       <Marquee pauseOnHover className="[--duration:20s]">
         {firstRow.map((review) => (
           <ReviewCard key={review.username} {...review} />
@@ -96,6 +103,6 @@ const MarqueeDemo = () => {
       <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
     </div>
   );
-};
+}
 
-export default MarqueeDemo;
+export default MarqueeDemo

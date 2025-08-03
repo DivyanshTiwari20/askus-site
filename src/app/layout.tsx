@@ -1,8 +1,8 @@
+// app/layout.tsx
+
 import type { Metadata } from "next";
 import "./globals.css";
-
-
-
+import CursorAura from "@/components/CursorAura"; // Make sure this path is correct
 
 export const metadata: Metadata = {
   title: "Askus",
@@ -16,7 +16,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {/* This component provides the logic and the div for the effect */}
+        <CursorAura /> 
+        
+        {/* The rest of your app's pages will be rendered here */}
+        {children}
+      </body>
     </html>
   );
 }

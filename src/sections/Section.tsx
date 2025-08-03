@@ -21,7 +21,7 @@ const Section = () => {
     },
     {
       src: "https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      width: 800,
+      width: 800, 
       height: 416,
     }
   ];
@@ -55,7 +55,7 @@ const Section = () => {
 
               {/* CTA Button */}
               <div className="pt-4">
-                <button className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                <button className="bg-black text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 hover:bg-gray-900">
                   Learn More About Us
                 </button>
               </div>

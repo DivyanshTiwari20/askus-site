@@ -69,9 +69,18 @@ const Hero = () => {
         <BlurFade delay={1.0} offset={8}>
           <a
             href="#"
-            className="px-5 sm:px-7 py-2 sm:py-2.5 bg-blue-600 text-white rounded-lg font-semibold shadow hover:bg-blue-700 transition text-sm sm:text-base"
+            className="px-6 sm:px-8 py-2.5 sm:py-3 bg-black text-white rounded-full font-semibold shadow-lg hover:shadow-xl hover:bg-gray-900 transition-all duration-200 text-sm sm:text-base flex items-center gap-2"
           >
             Get Started
+            <svg
+              className="w-4 h-4 ml-1 text-white"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2}
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14m-7-7l7 7-7 7" />
+            </svg>
           </a>
         </BlurFade>
       </div>

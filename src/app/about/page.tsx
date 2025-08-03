@@ -81,7 +81,7 @@ export default function About() {
                   We’re Ask Us — a team that blends strategy, design, content, and performance to build brands that move fast and grow faster. Where ideas meet impact, we help you stand out with insight-driven marketing, purposeful storytelling, and measurable results.
                 </p>
               </motion.div>
-              {/* Right: Image */}
+              {/* Right: Image with hover overlay */}
               <motion.div
                 className="w-full lg:w-1/2 flex justify-center items-center mb-8 lg:mb-0"
                 initial="hidden"
@@ -89,11 +89,17 @@ export default function About() {
                 viewport={{ once: true, amount: 0.5 }}
                 variants={itemVariants}
               >
-                <PixelImage
-                  src="/pic.jpg"
-                  customGrid={{ rows: 4, cols: 6 }}
-                  grayscaleAnimation
-                />
+                <div className="relative group w-fit">
+                  <PixelImage
+                    src="/photo.jpg"
+                    customGrid={{ rows: 4, cols: 6 }}
+                    grayscaleAnimation
+                  />
+                  <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/60 rounded-lg">
+                    <span className="text-white text-lg font-bold font-jakarta">Kulbhushan Vishwakarma</span>
+                    <span className="text-white text-sm font-manrope mt-1">Founder, CEO</span>
+                  </div>
+                </div>
               </motion.div>
             </div>
           </div>

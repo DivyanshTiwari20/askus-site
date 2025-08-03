@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import { AvatarCircles } from "@/components/magicui/avatar-circles";
 import { BlurFade } from "@/components/magicui/blur-fade";
+import ImageGrid from "../components/ImageGrid";
 
 const avatars = [
   {
@@ -35,7 +36,7 @@ const Hero = () => {
               <div className="flex items-center gap-1.5">
                 {/* 5 Stars */}
                 <div className="flex">
-                  {[...Array(5)].map((_, i) => (
+                  {Array.from({ length: 5 }).map((_, i) => (
                     <svg
                       key={i}
                       className="w-3.5 h-3.5 text-yellow-400 fill-current"
@@ -74,6 +75,11 @@ const Hero = () => {
           </a>
         </BlurFade>
       </div>
+      <BlurFade delay={1.25} offset={15}>
+        <div className="-mb-20">
+          <ImageGrid />
+        </div>
+      </BlurFade>
     </section>
   );
 };

@@ -68,7 +68,7 @@ const Navbar = () => {
 
           {/* Desktop Navigation Items */}
           <div className="hidden md:flex items-center space-x-1 lg:space-x-2">
-            {navItems.map((item, index) => (
+            {navItems.map((item, index) => (    
               <motion.div
                 key={item.name}
                 className="relative"

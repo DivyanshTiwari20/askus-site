@@ -38,7 +38,7 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { name: 'Services', href: 'services' },
+    { name: 'Services', href: '/services' },
     { name: 'About', href: 'about' },
     { name: 'Contact', href: 'contact' }
   ];

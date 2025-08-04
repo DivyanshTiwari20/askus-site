@@ -55,9 +55,12 @@ const Section = () => {
 
               {/* CTA Button */}
               <div className="pt-4">
-                <button className="bg-black text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 hover:bg-gray-900">
+                <a
+                  href="/about"
+                  className="bg-black text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 hover:bg-gray-900 inline-block"
+                >
                   Learn More About Us
-                </button>
+                </a>
               </div>
             </div>
           </BlurFade>

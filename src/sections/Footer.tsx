@@ -49,13 +49,11 @@ const Footer: React.FC = () => {
       'Mobile Apps',
       'Dashboards',
     ],
-    'Help & Support': [
-      'Help center',
-      'Partner community',
-      'Professional development',
-      'Blog',
-      'Account help',
-      'Resources',
+    'Get in touch': [
+      '+91-80092 27002',
+      'askusstudio@gmail.com',
+      'Mon-Sat,  10:00AM - 6:00PM',
+      'L-78, Sec-D, Sachivalaya Colony, L.K.O, Uttar Pradesh.',
     ],
   };
 

@@ -20,7 +20,7 @@ const reviews = [
     name: "divyansh",
     username: "@divyansh",
     body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/john",
+    img: "https://avatar.vercel.sh/divyansh",
   },
   {
     name: "Jane",
@@ -35,10 +35,16 @@ const reviews = [
     img: "https://avatar.vercel.sh/jenny",
   },
   {
-    name: "James",
-    username: "@james",
+    name: "Rahul",
+    username: "@rahul",
     body: "I'm at a loss for words. This is amazing. I love it.",
     img: "https://avatar.vercel.sh/james",
+  },
+  {
+    name: "Amit",
+    username: "@amit",
+    body: "This service is a game-changer! Highly recommend it to anyone.",
+    img: "https://avatar.vercel.sh/alex",
   },
 ];
 

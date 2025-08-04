@@ -100,7 +100,7 @@ const ValuesAndFooter: React.FC = () => {
           <motion.div className="text-center mb-16" variants={footerItemVariants} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our core values</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Fully functional dolor sit amet, consectetur risuse rutile et imperdiet dolores officin taccusantium.
+            At Ask Us, we are driven by a set of core values that guide everything we do. <b>We believe in Empowering Startups with Passion and Precision. </b>  
             </p>
           </motion.div>
 

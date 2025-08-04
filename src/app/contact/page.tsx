@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Phone, Mail, MapPin, Clock, Send, MessageSquare, User, Building2 } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/sections/Footer';
+import { CoolMode } from "@/components/magicui/cool-mode";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -149,25 +150,27 @@ export default function Contact() {
                     />
                   </div>
                   {/* Submit Button */}
-                  <motion.button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full bg-black text-white py-4 px-8 rounded-xl font-semibold flex items-center justify-center space-x-2 hover:bg-gray-900 transition-all duration-300 disabled:opacity-50"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
-                        <span>Sending...</span>
-                      </>
-                    ) : (
-                      <>
-                        <Send className="w-5 h-5" />
-                        <span>Send Message</span>
-                      </>
-                    )}
-                  </motion.button>
+                  <CoolMode>
+                    <motion.button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full bg-black text-white py-4 px-8 rounded-xl font-semibold flex items-center justify-center space-x-2 hover:bg-gray-900 transition-all duration-300 disabled:opacity-50"
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+                          <span>Sending...</span>
+                        </>
+                      ) : (
+                        <>
+                          <Send className="w-5 h-5" />
+                          <span>Send Message</span>
+                        </>
+                      )}
+                    </motion.button>
+                  </CoolMode>
                 </div>
               </div>
             </motion.div>

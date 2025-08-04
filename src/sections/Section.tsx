@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from 'react';
 import { BlurFade } from "@/components/magicui/blur-fade";
+import { CoolMode } from "@/components/magicui/cool-mode";
 
 const Section = () => {
   const images = [
@@ -55,12 +56,14 @@ const Section = () => {
 
               {/* CTA Button */}
               <div className="pt-4">
-                <a
-                  href="/about"
-                  className="bg-black text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 hover:bg-gray-900 inline-block"
-                >
-                  Learn More About Us
-                </a>
+                <CoolMode>
+                  <a
+                    href="/about"
+                    className="bg-black text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 hover:bg-gray-900 inline-block"
+                  >
+                    Learn More About Us
+                  </a>
+                </CoolMode>
               </div>
             </div>
           </BlurFade>

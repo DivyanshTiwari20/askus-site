@@ -1,7 +1,13 @@
+"use client";
+
+import { motion, Variants, useInView, animate } from "framer-motion";
+import { useRef, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import { AvatarCircles } from "@/components/magicui/avatar-circles";
 import { BlurFade } from "@/components/magicui/blur-fade";
 import ImageGrid from "../components/ImageGrid";
+import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
+import { CoolMode } from "@/components/magicui/cool-mode";
 
 const avatars = [
   {
@@ -67,21 +73,26 @@ const Hero = () => {
         </BlurFade>
         
         <BlurFade delay={1.0} offset={8}>
-          <a
-            href="#"
-            className="px-6 sm:px-8 py-2.5 sm:py-3 bg-black text-white rounded-full font-semibold shadow-lg hover:shadow-xl hover:bg-gray-900 transition-all duration-200 text-sm sm:text-base flex items-center gap-2"
-          >
-            Get Started
-            <svg
-              className="w-4 h-4 ml-1 text-white"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-              viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14m-7-7l7 7-7 7" />
-            </svg>
-          </a>
+          {/* --- MODIFIED BUTTON --- */}
+          <CoolMode>
+            <a href="/contact">
+              <InteractiveHoverButton>
+                  <span className="inline-flex items-center gap-2">
+                      Get Started
+                      <svg
+                        className="w-4 h-4"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14m-7-7l7 7-7 7" />
+                      </svg>
+                  </span>
+              </InteractiveHoverButton>
+            </a>
+          </CoolMode>
+          {/* --- END MODIFIED BUTTON --- */}
         </BlurFade>
       </div>
       <BlurFade delay={1.25} offset={15}>

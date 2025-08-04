@@ -1,5 +1,3 @@
-// app/layout.tsx
-
 import type { Metadata } from "next";
 import "./globals.css";
 import CursorAura from "@/components/CursorAura"; // Make sure this path is correct
@@ -16,7 +14,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      {/* The 'overflow-x-hidden' class is added here.
+        This is the key change that prevents horizontal scrolling across your entire site
+        by hiding any content that overflows the viewport's width.
+      */}
+      <body className="overflow-x-hidden">
         {/* This component provides the logic and the div for the effect */}
         <CursorAura /> 
         

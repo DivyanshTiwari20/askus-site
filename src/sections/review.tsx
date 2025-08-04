@@ -17,8 +17,8 @@ const reviews = [
     img: "https://avatar.vercel.sh/jill",
   },
   {
-    name: "John",
-    username: "@john",
+    name: "divyansh",
+    username: "@divyansh",
     body: "I'm at a loss for words. This is amazing. I love it.",
     img: "https://avatar.vercel.sh/john",
   },
@@ -89,6 +89,7 @@ export function MarqueeDemo() {
 
   return (
     <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
+      <h2 className="text-4xl font-bold mb-8 mt-4 text-center font-jakarta">Testimonials</h2>
       <Marquee pauseOnHover className="[--duration:20s]">
         {firstRow.map((review) => (
           <ReviewCard key={review.username} {...review} />

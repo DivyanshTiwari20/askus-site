@@ -236,5 +236,6 @@ export const CoolMode: React.FC<CoolModeProps> = ({ children, options }) => {
     }
   }, [options]);
 
-  return React.cloneElement(children as React.ReactElement, { ref });
+  // @ts-ignore
+return React.cloneElement(children as React.ReactElement, { ref });
 };

@@ -83,7 +83,7 @@ const Footer: React.FC = () => {
               <h3 className="text-3xl font-bold mb-8">.Askus</h3>
               <div className="mb-8">
                 <h4 className="text-sm font-bold uppercase tracking-wider mb-4">Connect With Us.</h4>
-                <div className="flex">
+                <div className="flex flex-col sm:flex-row items-stretch">
                   <input
                     type="email"
                     placeholder="Enter your email address..."
@@ -92,7 +92,7 @@ const Footer: React.FC = () => {
                   />
                   <motion.button
                     // Button styles updated to the dark theme from the image
-                    className="bg-gray-800 text-white px-6 py-2 rounded-r-md font-semibold hover:bg-black transition-colors"
+                    className="bg-gray-800 text-white px-6 py-2 rounded-r-md font-semibold hover:bg-black transition-colors mt-3 sm:mt-0 sm:ml-0"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     transition={{ type: 'spring' as const, stiffness: 300, damping: 18 }}

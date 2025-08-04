@@ -146,7 +146,10 @@ const Navbar = () => {
             }}
             className="ml-2"
           >
-            <ShimmerButton className="hidden xs:inline-flex text-white text-xs sm:text-sm lg:text-base">
+            <ShimmerButton
+              className="hidden xs:inline-flex text-white text-xs sm:text-sm lg:text-base"
+              onClick={() => { window.location.href = '/contact'; }}
+            >
               <span>Book a Demo</span>
               <motion.div
                 className="ml-2"

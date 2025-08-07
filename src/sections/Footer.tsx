@@ -34,20 +34,20 @@ const Footer: React.FC = () => {
   // Your original content is preserved
   const footerLinks = {
     Features: [
-      'Customer management',
-      'Security Holding',
-      'Invoices management',
-      'Live chat',
-      'Integrations',
-      'Pricing',
+      'Creative solutions',
+      'Results-driven strategies',
+      'Personalized client support',
+      'Cutting-edge technology',
+      'Growth-focused mindset',
+      'Affordable pricing'
     ],
-    Solutions: [
-      'Finance automation',
-      'Orders',
-      'CRM',
-      'Templates',
-      'Mobile Apps',
-      'Dashboards',
+    Services: [
+      'Video Production',
+      'Design & Development',
+      'Social Media Management',
+      'Email Marketing',
+      'SEO Optimization',
+      'WhatsApp Marketing',
     ],
     'Get in touch': [
       '+91-80092 27002',

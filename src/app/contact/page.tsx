@@ -42,7 +42,6 @@ export default function Contact() {
     alert('Message sent successfully! We\'ll get back to you soon.');
   };
 
-
   const services = [
     "Brand Strategy",
     "Digital Marketing",
@@ -58,8 +57,79 @@ export default function Contact() {
     <>
       <Navbar />
       <div className="pt-20 min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
-        <div className="max-w-6xl mx-auto px-4 py-16">
-          <form onSubmit={handleSubmit} className="grid lg:grid-cols-2 gap-8 lg:gap-16 mb-16">
+        <div className="max-w-6xl mx-auto px-4 py-8 sm:py-12 md:py-16">
+          {/* Responsive: form on top, content below on mobile/tablet; side by side on desktop */}
+          <form
+            onSubmit={handleSubmit}
+            className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-8 lg:gap-16 mb-16"
+          >
+            {/* Right Column - CTA and Info */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 1.4 }}
+              className="space-y-8 order-1 lg:order-2"
+            >
+              <div className="bg-white/60 backdrop-blur-lg rounded-3xl p-6 sm:p-8 lg:p-10 border border-white/20 shadow-xl">
+                <h2 className="text-2xl font-bold mb-6 font-jakarta">
+                  Why <span className="text-violet-700">ASKUS?</span>
+                </h2>
+                <p className="text-base font-manrope mb-6 text-gray-700">
+                  <b>Transforming ideas</b> into impactful <b>digital solutions</b>, we tailor every project to <b>elevate your brand</b> and connect with your audience effectively.
+                </p>
+                <p className="text-base font-manrope mb-8 text-gray-700">
+                  At <b>ASKUS</b>, we partner with <b>visionary brands</b> that are hungry for <b>growth</b>. If you're driven by <b>ambition</b> and ready to <b>disrupt your industry</b>, let's build something <b>extraordinary</b> together.
+                </p>
+                {/* Key Features Grid */}
+                <div className="grid sm:grid-cols-2 gap-6 mb-8">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-violet-700 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 font-jakarta">Results-Driven Approach</h4>
+                      <p className="text-sm text-gray-600 font-manrope">Every strategy we craft is built around measurable outcomes and real business growth.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-violet-700 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 font-jakarta">Creative Excellence</h4>
+                      <p className="text-sm text-gray-600 font-manrope">Award-winning designs and content that captivate audiences and drive engagement.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-violet-700 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 font-jakarta">End-to-End Solutions</h4>
+                      <p className="text-sm text-gray-600 font-manrope">From concept to execution, we handle every aspect of your digital transformation journey.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-violet-700 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 font-jakarta">24/7 Support</h4>
+                      <p className="text-sm text-gray-600 font-manrope">Dedicated support team ensuring your success at every step of the way.</p>
+                    </div>
+                  </div>
+                </div>
+                {/* Stats Section */}
+                {/* <div className="grid grid-cols-3 gap-4 mb-8 p-6 bg-violet-50/50 rounded-2xl border border-violet-100">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-violet-700 font-jakarta">500+</div>
+                    <div className="text-xs text-gray-600 font-manrope">Projects Delivered</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-violet-700 font-jakarta">98%</div>
+                    <div className="text-xs text-gray-600 font-manrope">Client Satisfaction</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-violet-700 font-jakarta">24/7</div>
+                    <div className="text-xs text-gray-600 font-manrope">Support Available</div>
+                  </div>
+                </div> */}
+                
+              </div>
+            </motion.div>
+
             {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -72,7 +142,6 @@ export default function Contact() {
                   <MessageSquare className="w-8 h-8 text-blue-600 mr-3" />
                   <h2 className="text-2xl sm:text-3xl font-bold text-gray-800">Send us a Message</h2>
                 </div>
-
                 <div className="space-y-6">
                   <div className="grid sm:grid-cols-2 gap-6">
                     {/* Name and Email */}
@@ -174,31 +243,10 @@ export default function Contact() {
                 </div>
               </div>
             </motion.div>
-
-            {/* Right Column - CTA and Info (unchanged) */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 1.4 }}
-              className="space-y-8 order-1 lg:order-2"
-            >
-              <div className="bg-white/60 backdrop-blur-lg rounded-3xl p-6 sm:p-8 lg:p-10 border border-white/20 shadow-xl">
-                <h2 className="text-2xl font-bold mb-4 font-jakarta">Why <span className="text-violet-700">ASKUS?</span></h2>
-                <p className="text-base font-manrope mb-4">
-                  <b>Transforming ideas</b> into impactful <b>digital solutions</b>, we tailor every project to <b>elevate your brand</b> and connect with your audience effectively.
-                </p>
-                <p className="text-base font-manrope">
-                  At <b>ASKUS</b>, we partner with <b>visionary brands</b> that are hungry for <b>growth</b>. If you’re driven by <b>ambition</b> and ready to <b>disrupt your industry</b>, let’s build something <b>extraordinary</b> together.
-                </p>
-              </div>
-            </motion.div>
           </form>
-
-          
         </div>
       </div>
       <Footer />
     </>
   );
 }
-

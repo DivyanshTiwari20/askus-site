@@ -105,10 +105,15 @@ We create email campaigns that connect with your audience. From catchy subject l
   }
 };
 
-export default async function ServicePage({ params }: { params: { slug: string } }) {
-  // Await params as required by Next.js dynamic route API
-  const awaitedParams = await Promise.resolve(params);
-  const service = servicesData[awaitedParams.slug as keyof typeof servicesData];
+// Updated function signature to accept Promise<{ slug: string }>
+export default async function ServicePage({ 
+  params 
+}: { 
+  params: Promise<{ slug: string }> 
+}) {
+  // Await the params promise
+  const { slug } = await params;
+  const service = servicesData[slug as keyof typeof servicesData];
 
   if (!service) {
     notFound();

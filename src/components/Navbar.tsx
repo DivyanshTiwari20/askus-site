@@ -71,7 +71,7 @@ const Navbar = () => {
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
             style={{ cursor: "pointer" }}
           >
-            .Askus
+            .ASKUSstudio
           </motion.a>
 
           {/* Desktop Navigation Items: Hidden on mobile (md:flex) */}

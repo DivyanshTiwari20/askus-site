@@ -12,19 +12,19 @@ import { SparklesText } from "@/components/magicui/sparkles-text";
 
 const avatars = [
   {
-    imageUrl: "https://avatars.githubusercontent.com/u/16860528",
+    imageUrl: "./logo1.jpg",
     profileUrl: "https://github.com/dillionverma",
   },
   {
-    imageUrl: "https://avatars.githubusercontent.com/u/20110627",
+    imageUrl: "./logo2.jpg",
     profileUrl: "https://github.com/tomonarifeehan",
   },
   {
-    imageUrl: "https://avatars.githubusercontent.com/u/106103625",
+    imageUrl: "./logo6.jpg",
     profileUrl: "https://github.com/BankkRoll",
   },
   {
-    imageUrl: "https://avatars.githubusercontent.com/u/59228569",
+    imageUrl: "./logo4.jpg",
     profileUrl: "https://github.com/safethecode",
   },
 ];

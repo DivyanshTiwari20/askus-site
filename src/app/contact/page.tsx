@@ -33,13 +33,27 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    setFormData({ name: '', email: '', company: '', phone: '', service: '', message: '' });
-    setIsSubmitting(false);
-
-    alert('Message sent successfully! We\'ll get back to you soon.');
+      if (response.ok) {
+        alert('Message sent successfully! We\'ll get back to you soon.');
+        setFormData({ name: '', email: '', company: '', phone: '', service: '', message: '' });
+      } else {
+        throw new Error('Failed to send message. Please try again later.');
+      }
+    } catch (error) {
+      console.error(error);
+      alert('An error occurred. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const services = [

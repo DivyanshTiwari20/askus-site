@@ -91,7 +91,7 @@ export default function About() {
               >
                 <div className="relative group w-fit">
                   <PixelImage
-                    src="/photo.jpg"
+                    src="/pic-kb.jpg"
                     customGrid={{ rows: 4, cols: 6 }}
                     grayscaleAnimation
                   />

@@ -19,13 +19,13 @@ const reviews = [
   {
     name: "Inara",
     username: "@inara",
-    body: "I have 20 workers and many projects. Was very hard to manage everything. They made simple software to track workers, payments, and project progress. Everything is organized now. Saves me 3 hours every day.",
+    body: "I have 20 workers and many projects. Was very hard to manage everything. They made simple software to track workers, payments, and project progress.Saves me 3 hours every day.",
     img: "./logo6.jpg",
   },
   {
     name: "Verlanie",
     username: "@verlaine",
-    body: "Nobody could find my bussiness online before. They did SEO and Google Ads for me. Now I get 5-10 new customers every week from internet. My salon is always busy now. Very happy with results!",
+    body: "Nobody could find my bussiness online before. They did SEO and Google Ads for me. Now I get 5-10 new customers every week from internet. Very happy with results!",
     img: "./logo3.jpg",
   },
   {

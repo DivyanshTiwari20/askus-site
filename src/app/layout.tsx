@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import CursorAura from "@/components/CursorAura"; // Make sure this path is correct
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "Askus",
@@ -24,6 +25,7 @@ export default function RootLayout({
         
         {/* The rest of your app's pages will be rendered here */}
         {children}
+        <Analytics />
       </body>
     </html>
   );

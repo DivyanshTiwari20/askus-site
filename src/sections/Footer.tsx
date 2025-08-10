@@ -187,7 +187,7 @@ const Footer: React.FC = () => {
                           {link.label}
                         </Link>
                       ) : (
-                        <span className="text-gray-600 text-sm">{link}</span>
+                        <span className="text-gray-600 text-sm">{typeof link === 'string' ? link : link.label}</span>
                       )}
                     </motion.li>
                   ))}

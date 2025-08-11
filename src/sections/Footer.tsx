@@ -200,7 +200,13 @@ const Footer: React.FC = () => {
 
       {/* Bottom Bar */}
       <div className="bg-black text-white">
-        <div className="max-w-6xl mx-auto px-6 py-4 text-center">
+        <div className="max-w-6xl mx-auto px-6 py-2 flex flex-row items-center justify-center gap-3">
+          <img
+            src="/logoo.png"
+            alt="Askus Studio Logo"
+            className="h-12  w-auto m-0 p-0"
+            style={{ objectFit: "contain", margin: 0, padding: 0 }}
+          />
           <p className="text-xs text-gray-400">©2025 askusStudio. All rights reserved.</p>
         </div>
       </div>

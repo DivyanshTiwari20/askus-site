@@ -4,20 +4,20 @@ import { useRef, useEffect } from "react";
 
 const cards = [
   {
-    title: "•1,900+",
-    description: "• Startup ready to connect",
+    title: "•1,500+",
+    description: "• Content pieces shot & delivered",
     icon: "🚀",
     color: "from-purple-500 to-pink-500"
   },
   {
-    title: "•1.8K+",
-    description: "• Happy global users",
-    icon: "👥",
+    title: "•500K+",
+    description: "• Organic reach generated for clients",
+    icon: "📈", // Changed to a chart/growth icon for better representation
     color: "from-blue-500 to-cyan-500"
   },
   {
-    title: "•4.90+",
-    description: "• 10k+ rating",
+    title: "•50+",
+    description: "• Brands trusting us with their contentg",
     icon: "⭐",
     color: "from-amber-500 to-orange-500"
   },

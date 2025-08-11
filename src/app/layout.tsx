@@ -1,4 +1,4 @@
-import type { Metadata } from "next ";
+import type { Metadata } from "next";
 import "./globals.css";
 import CursorAura from "@/components/CursorAura";
 import { Analytics } from "@vercel/analytics/next";

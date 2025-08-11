@@ -41,7 +41,7 @@ const Navbar = () => {
     { name: 'Services', href: '/services' },
     { name: 'About', href: 'about' },
     { name: 'Contact', href: 'contact' },
-    { name: 'Get free SEO', href: 'https://polish-rho.vercel.app/' }
+    // { name: 'Get free SEO', href: 'https://polish-rho.vercel.app/' }
   ];
 
   return (

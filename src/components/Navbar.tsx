@@ -40,6 +40,7 @@ const Navbar = () => {
   const navItems = [
     { name: 'Services', href: '/services' },
     { name: 'About', href: 'about' },
+    { name: 'Blogs', href: '/blogs' },
     { name: 'Contact', href: 'contact' },
     // { name: 'Get free SEO', href: 'https://polish-rho.vercel.app/' }
   ];

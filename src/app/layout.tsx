@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import CursorAura from "@/components/CursorAura";
 import { Analytics } from "@vercel/analytics/next";
+import Navbar from "@/components/Navbar";
+import Footer from "@/sections/Footer";
 
 export const metadata: Metadata = {
   title: "Askus | Web Development, Marketing & Social Media Services for Startups",
@@ -51,7 +53,9 @@ export default function RootLayout({
     <html lang="en">
       <body className="overflow-x-hidden">
         <CursorAura />
+        <Navbar />
         {children}
+        <Footer />
         <Analytics />
       </body>
     </html>

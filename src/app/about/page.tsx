@@ -3,8 +3,6 @@ import React from 'react';
 import type { FC } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Phone, Target, Palette, Eye, MessageCircle } from 'lucide-react';
-import Navbar from '@/components/Navbar';
-import Footer from '@/sections/Footer';
 import { PixelImage } from "@/components/magicui/pixel-image";
 
 // The page component, now with updated content and modern styling.
@@ -58,7 +56,6 @@ export default function About() {
 
   return (
     <>
-      <Navbar />
       {/* Main container with a subtle background and padding */}
       <div className="bg-white text-gray-800 font-inter">
         
@@ -83,7 +80,7 @@ export default function About() {
               </motion.div>
               {/* Right: Image with hover overlay */}
               <motion.div
-                className="w-full lg:w-1/2 flex justify-center items-center mb-8 lg:mb-0"
+                className="w-full lg:w-1/2 flex flex-col justify-center items-center mb-8 lg:mb-0"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.5 }}
@@ -99,6 +96,11 @@ export default function About() {
                     <span className="text-white text-lg font-bold font-jakarta">Kulbhushan Vishwakarma</span>
                     <span className="text-white text-sm font-manrope mt-1">Founder, CEO</span>
                   </div>
+                </div>
+                {/* Add name and title as normal text below the image */}
+                <div className="flex flex-col items-center mt-4">
+                  <span className="text-gray-900 text-lg font-bold font-jakarta">Kulbhushan Vishwakarma</span>
+                  <span className="text-gray-600 text-sm font-manrope mt-1">Founder, CEO</span>
                 </div>
               </motion.div>
             </div>
@@ -168,7 +170,6 @@ export default function About() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

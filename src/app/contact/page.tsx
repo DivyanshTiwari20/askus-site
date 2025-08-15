@@ -1,10 +1,7 @@
-
 'use client'
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Phone, Mail, MapPin, Clock, Send, MessageSquare, User, Building2 } from 'lucide-react';
-import Navbar from '@/components/Navbar';
-import Footer from '@/sections/Footer';
 import { CoolMode } from "@/components/magicui/cool-mode";
 
 export default function Contact() {
@@ -69,7 +66,6 @@ export default function Contact() {
 
   return (
     <>
-      <Navbar />
       <div className="pt-20 min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
         <div className="max-w-6xl mx-auto px-4 py-8 sm:py-12 md:py-16">
           {/* Responsive: form on top, content below on mobile/tablet; side by side on desktop */}
@@ -260,7 +256,6 @@ export default function Contact() {
           </form>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

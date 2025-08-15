@@ -13,8 +13,6 @@ import {
   LucideIcon
 } from 'lucide-react';
 import Link from 'next/link';
-import Navbar from '@/components/Navbar';
-import Footer from '@/sections/Footer';
 
 // ✅ Type definition for props
 interface ServiceCardProps {
@@ -247,8 +245,6 @@ export default function Services() {
 
   return (
     <>
-      <Navbar />
-
       <main className="min-h-screen bg-white mt-12">
         <div className="pt-24 pb-16">
           <div className="w-full max-w-6xl px-4 sm:px-6 lg:px-8 mx-auto">
@@ -272,8 +268,6 @@ export default function Services() {
           </div>
         </div>
       </main>
-
-      <Footer />
     </>
   );
 }

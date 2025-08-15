@@ -3,8 +3,7 @@ import Hero from "../sections/Hero";
 import Section from "../sections/Section";
 // import Services from "@/sections/Services";
 import MarqueeDemo from "@/sections/review";
-import ValuesAndFooter from "@/sections/values";
-import Footer from "@/sections/Footer";
+import Values from "@/sections/Values";
 
 // Define page-specific metadata for SEO
 export const metadata: Metadata = {
@@ -49,8 +48,7 @@ export default function Home() {
       <Section />
       {/* <Services /> */}
       <MarqueeDemo />
-      <ValuesAndFooter />
-      <Footer />
+      <Values />
     </div>
   );
 }

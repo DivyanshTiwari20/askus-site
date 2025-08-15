@@ -5,6 +5,8 @@ import Section from "../sections/Section";
 import MarqueeDemo from "../sections/review";
 import Values from "@/sections/Values";
 
+
+
 // Define page-specific metadata for SEO
 export const metadata: Metadata = { 
   title: "Askus | Premier Startup Agency for Web Development & Digital Marketing",

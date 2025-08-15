@@ -3,7 +3,7 @@ import Hero from "../sections/Hero";
 import Section from "../sections/Section";
 // import Services from "../sections/Services";
 import MarqueeDemo from "../sections/review";
-import Values from "../sections/Values";
+import Values from "@/sections/Values";
 
 // Define page-specific metadata for SEO
 export const metadata: Metadata = { 

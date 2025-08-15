@@ -1,4 +1,3 @@
-import Navbar from "../components/Navbar";
 import { AvatarCircles } from "@/components/magicui/avatar-circles";
 import { BlurFade } from "@/components/magicui/blur-fade";
 
@@ -24,7 +23,6 @@ const avatars = [
 const Hero = () => {
   return (
     <section className="gradient-blue bg-gradient-to-r from-violet-200 to-blue-200 min-h-screen w-full">
-      <Navbar />
       <div className="max-w-3xl mx-auto flex flex-col items-center text-center px-3 sm:px-5 md:px-7 pt-14 sm:pt-18 md:pt-22 pb-14 sm:pb-18 md:pb-25">
         
         {/* Avatar Section with Stars and Text */}

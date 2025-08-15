@@ -1,7 +1,5 @@
 // src/app/services/[slug]/page.tsx
 import { notFound } from 'next/navigation';
-import Navbar from '@/components/Navbar';
-import Footer from '@/sections/Footer';
 import ServiceSidebar from '@/components/ServiceSidebar';
 
 // Service data (you can move this to a separate file)
@@ -121,7 +119,6 @@ export default async function ServicePage({
 
   return (
     <>
-      <Navbar />
       <main className="pt-24 pb-16 mt-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-8">
@@ -181,7 +178,6 @@ export default async function ServicePage({
           </div>
         </div>
       </main>
-      <Footer />
     </>
   );
 }

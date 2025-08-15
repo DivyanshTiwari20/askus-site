@@ -13,13 +13,13 @@ export async function generateStaticParams() {
 }
 
 type BlogPostPageProps = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
-  const { slug } = params;
+  const { slug } = await params;
 
   const filePath = path.join(process.cwd(), "src", "data", `${slug}.mdx`);
 

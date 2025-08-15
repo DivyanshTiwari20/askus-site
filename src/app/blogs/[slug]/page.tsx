@@ -2,7 +2,6 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { MDXRemote } from "next-mdx-remote/rsc";
-import type { PageProps } from "next";
 
 // Generate static params for SSG
 export async function generateStaticParams() {
@@ -13,16 +12,20 @@ export async function generateStaticParams() {
   }));
 }
 
-// Page component
-export default async function BlogPostPage({
-  params,
-}: PageProps<{ slug: string }>) {
+type BlogPostPageProps = {
+  params: {
+    slug: string;
+  };
+};
+
+export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = params;
 
   const filePath = path.join(process.cwd(), "src", "data", `${slug}.mdx`);
 
   if (!fs.existsSync(filePath)) {
-    // Optional: throw to trigger 404 in Next.js
+    // Optional: trigger a 404 page
+    // notFound(); // import { notFound } from "next/navigation";
     throw new Error(`Blog post not found: ${slug}`);
   }
 

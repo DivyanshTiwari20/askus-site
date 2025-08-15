@@ -119,7 +119,13 @@ const Footer: React.FC = () => {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
             >
-              <h3 className="text-3xl font-bold mb-8">.Askus</h3>
+              <img
+                src="/logoo.png"
+                alt="Askus Logo"
+                className="h-20 w-auto mb-8"
+                style={{ objectFit: 'contain' }}
+              />
+              {/* <h3 className="text-3xl font-bold mb-8">.Askus</h3> */}
               <div className="mb-8">
                 <h4 className="text-sm font-bold uppercase tracking-wider mb-4">Connect With Us.</h4>
                 <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row items-stretch">

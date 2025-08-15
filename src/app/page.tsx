@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import Hero from "../sections/Hero";
 import Section from "../sections/Section";
-// import Services from "@/sections/Services";
-import MarqueeDemo from "@/sections/review";
-import Values from "@/sections/Values";
+// import Services from "../sections/Services";
+import MarqueeDemo from "../sections/review";
+import Values from "../sections/Values";
 
 // Define page-specific metadata for SEO
-export const metadata: Metadata = {
+export const metadata: Metadata = { 
   title: "Askus | Premier Startup Agency for Web Development & Digital Marketing",
   description:
     "Discover Askus, your trusted startup agency for innovative web development, digital marketing, and social media marketing solutions. Empower your startup with bold digital strategies.",

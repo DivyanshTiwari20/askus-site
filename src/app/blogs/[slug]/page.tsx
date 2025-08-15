@@ -24,12 +24,19 @@ const BlogPostPage = async ({ params }: BlogPostPageProps) => {
   const { content, data } = matter(fileContents);
 
   return (
-    <div className="container mx-auto px-4 py-8 max-w-6xl">
-      <h1 className="text-4xl font-bold mb-2">{data.title}</h1>
-      <p className="text-gray-500 mb-8">{data.date}</p>
-      <div className="prose lg:prose-xl">
+    <div className="container mx-auto px-6 py-12 max-w-4xl">
+      {/* Title */}
+      <h1 className="text-4xl font-bold mb-3 text-gray-900">{data.title}</h1>
+      
+      {/* Date */}
+      <p className="text-gray-500 text-sm mb-10 border-b border-gray-200 pb-4">
+        {data.date}
+      </p>
+      
+      {/* Blog Content */}
+      <article className="prose prose-lg lg:prose-xl max-w-none prose-img:rounded-xl prose-headings:scroll-mt-20 prose-a:text-blue-600 hover:prose-a:text-blue-800">
         <MDXRemote source={content} />
-      </div>
+      </article>
     </div>
   );
 };

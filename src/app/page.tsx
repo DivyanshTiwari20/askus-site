@@ -5,6 +5,7 @@ import Section from "../sections/Section";
 import MarqueeDemo from "../sections/review";
 import Values from "@/sections/Values";
 import { Faq1 } from "@/components/faq"; // Import the Accordion/FAQ component
+import BrandLogos from "@/components/BrandLogo"; // Import BrandLogo.tsx
 
 // Define page-specific metadata for SEO
 export const metadata: Metadata = { 
@@ -51,6 +52,7 @@ export default function Home() {
       <MarqueeDemo />
       <Values />
       {/* Accordion/FAQ section inserted above the footer */}
+      <BrandLogos />
       <div className="">
         <Faq1 />
       </div>

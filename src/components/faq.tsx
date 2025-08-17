@@ -65,19 +65,19 @@ const Faq1 = ({
   ],
 }: Faq1Props) => {
   return (
-    <section className="py-32">
-      <div className="container max-w-6xl mx-auto text-center">
-        <h1 className="mb-4 font-bold md:mb-11 text-4xl md:text-5xl">
+    <section className="py-16 md:py-32"> {/* Reduced padding on mobile for better fit */}
+      <div className="container max-w-6xl mx-auto text-center px-4 sm:px-6 lg:px-8"> {/* Added responsive padding */}
+        <h1 className="mb-4 font-bold md:mb-11 text-3xl sm:text-4xl md:text-5xl"> {/* Responsive font sizes */}
           {heading}
         </h1>
         <div className="mx-auto w-full max-w-4xl">
           <Accordion type="single" collapsible>
             {items.map((item, index) => (
               <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger className="font-semibold hover:no-underline text-base md:text-lg text-center">
+                <AccordionTrigger className="font-semibold hover:no-underline text-base sm:text-lg text-center">
                   {item.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground text-md text-left">
+                <AccordionContent className="text-muted-foreground text-sm sm:text-base text-left"> {/* Responsive text sizes */}
                   {item.answer}
                 </AccordionContent>
               </AccordionItem>

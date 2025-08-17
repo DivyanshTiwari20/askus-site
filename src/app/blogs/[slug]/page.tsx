@@ -33,7 +33,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { content, data } = matter(fileContents);
 
   return (
-    <div className="container mx-auto px-6 py-12 max-w-4xl">
+    <div className="container mx-auto px-6 py-12 max-w-4xl my-22">
       {/* Title */}
       <h1 className="text-4xl font-bold mb-3 text-gray-900">{data.title}</h1>
 

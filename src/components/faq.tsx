@@ -90,3 +90,4 @@ const Faq1 = ({
 };
 
 export { Faq1 };
+

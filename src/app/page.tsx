@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Hero from "../sections/Hero";
 import Section from "../sections/Section";
 // import Services from "../sections/Services";
-import MarqueeDemo from "../sections/review";
+// import MarqueeDemo from "../sections/review";
 import Values from "@/sections/Values";
 import { Faq1 } from "@/components/faq"; // Import the Accordion/FAQ component
 import BrandLogos from "@/components/BrandLogo"; // Import BrandLogo.tsx
@@ -49,7 +49,7 @@ export default function Home() {
       <Hero />
       <Section />
       {/* <Services /> */}
-      <MarqueeDemo />
+      {/* <MarqueeDemo /> */}
       <Values />
       {/* Accordion/FAQ section inserted above the footer */}
       <BrandLogos />

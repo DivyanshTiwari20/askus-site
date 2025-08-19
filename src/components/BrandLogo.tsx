@@ -1,9 +1,7 @@
-// components/BrandLogos.tsx
 'use client';
 
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 interface Brand {
   name: string;
@@ -29,7 +27,7 @@ const brands: Brand[] = [
   },
   {
     name: "Total Focus",
-    imageSrc: "/logo7.png",
+    imageSrc: "/logo1.jpg",
   },
   {
     name: "Total Focus",
@@ -37,64 +35,65 @@ const brands: Brand[] = [
   },
 ];
 
-// Custom hook to detect if device is desktop (md and up)
-function useIsDesktop() {
-  const [isDesktop, setIsDesktop] = useState<boolean>(false);
-
-  useEffect(() => {
-    // Only run on client
-    const check = () => setIsDesktop(window.matchMedia("(min-width: 768px)").matches);
-    check();
-    window.addEventListener("resize", check);
-    return () => window.removeEventListener("resize", check);
-  }, []);
-
-  return isDesktop;
-}
-
 const BrandLogos = () => {
-  const [hovered, setHovered] = useState(false);
-  const isDesktop = useIsDesktop();
+  // Create 4 sets for ultra-smooth infinite loop
+  const duplicatedBrands = [...brands, ...brands, ...brands, ...brands];
 
   return (
-    <section
-      className="w-full bg-black py-24 relative"
-      onMouseEnter={isDesktop ? () => setHovered(true) : undefined}
-      onMouseLeave={isDesktop ? () => setHovered(false) : undefined}
-    >
-      <div className="container mx-auto max-w-7xl grid grid-cols-2 md:grid-cols-6 gap-y-20 gap-x-4 md:gap-x-12 md:gap-y-12 justify-items-center items-center px-4 md:px-0">
-        {brands.map((brand, idx) => (
-          <div
-            key={`${brand.name}-${brand.imageSrc}`}
-            className="flex flex-col items-center w-full"
-          >
-            <div className="w-32 h-10 md:w-44 md:h-14 flex items-center justify-center">
-              <Image
-                src={brand.imageSrc}
-                alt={brand.name}
-                width={176}
-                height={56}
-                className="object-contain grayscale invert"
-                priority
-              />
-            </div>
-          </div>
-        ))}
+    <section className="w-full bg-black py-18 overflow-hidden">
+      {/* Section title for mobile */}
+      <div className="text-center mb-12 md:hidden">
+        <h2 className="text-white text-xl font-bold">Our Brands</h2>
       </div>
 
-      <AnimatePresence>
-        {isDesktop && hovered && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="absolute inset-0 flex items-center justify-center bg-black/42 backdrop-blur-[2px] text-white text-xl md:text-2xl font-bold"
-          >
-            Our brands
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <div className="relative">
+        <motion.div
+          animate={{
+            x: [`0%`, `-${(100 * brands.length)}%`],
+          }}
+          transition={{
+            x: {
+              repeat: Infinity,
+              repeatType: "loop",
+              duration: 55,
+              ease: "linear",
+            },
+          }}
+          style={{
+            width: `${duplicatedBrands.length * 100}px`, // Ensure proper width calculation
+          }}
+          className="flex gap-8 md:gap-16 items-center"
+        >
+          {duplicatedBrands.map((brand, idx) => (
+            <div
+              key={`${brand.name}-${brand.imageSrc}-${idx}`}
+              className="flex-shrink-0"
+            >
+              <div className="w-46 h-18 sm:w-58 sm:h-20 md:w-80 md:h-29 flex items-center justify-center">
+                <Image
+                  src={brand.imageSrc}
+                  alt={brand.name}
+                  width={323}
+                  height={115}
+                  className="object-contain grayscale invert max-w-full max-h-full"
+                  priority={idx < 6}
+                />
+              </div>
+            </div>
+          ))}
+        </motion.div>
+        
+        {/* Gradient overlays for smooth fade effect */}
+        <div className="absolute top-0 left-0 w-16 md:w-32 h-full bg-gradient-to-r from-black to-transparent pointer-events-none" />
+        <div className="absolute top-0 right-0 w-16 md:w-32 h-full bg-gradient-to-l from-black to-transparent pointer-events-none" />
+      </div>
+
+      {/* Section title for desktop - overlaid */}
+      <div className="hidden md:block absolute inset-0 flex items-center justify-center pointer-events-none">
+        <h2 className="text-white text-2xl font-bold bg-black/50 px-6 py-3 rounded-lg backdrop-blur-sm">
+          Our Brands
+        </h2>
+      </div>
     </section>
   );
 };

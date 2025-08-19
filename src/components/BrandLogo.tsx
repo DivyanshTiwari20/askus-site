@@ -23,11 +23,11 @@ const brands: Brand[] = [
   },
   {
     name: "Grandmark",
-    imageSrc: "/logo5.jpg",
+    imageSrc: "/logo1.jpg",
   },
   {
     name: "Total Focus",
-    imageSrc: "/logo1.jpg",
+    imageSrc: "/logo5.jpg",
   },
   {
     name: "Total Focus",
@@ -89,11 +89,11 @@ const BrandLogos = () => {
       </div>
 
       {/* Section title for desktop - overlaid */}
-      <div className="hidden md:block absolute inset-0 flex items-center justify-center pointer-events-none">
+      {/* <div className="hidden md:block absolute inset-0 flex items-center justify-center pointer-events-none">
         <h2 className="text-white text-2xl font-bold bg-black/50 px-6 py-3 rounded-lg backdrop-blur-sm">
           Our Brands
         </h2>
-      </div>
+      </div> */}
     </section>
   );
 };

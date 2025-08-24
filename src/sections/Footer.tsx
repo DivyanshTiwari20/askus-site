@@ -120,9 +120,9 @@ const Footer: React.FC = () => {
               viewport={{ once: true, amount: 0.2 }}
             >
               <img
-                src="/logoo.png"
+                src="/logo-og.png"
                 alt="Askus Logo"
-                className="h-[120px] w-auto mb-8"
+                className="h-25 w-auto mb-8"
                 style={{ objectFit: 'contain' }}
               />
               {/* <h3 className="text-3xl font-bold mb-8">.Askus</h3> */}
@@ -210,7 +210,7 @@ const Footer: React.FC = () => {
           {/* <img
             src="/logoo.png"
             alt="Askus Studio Logo"
-            className="h-[60px] w-auto mb-8"
+            className="h-12  w-auto m-0 p-0"
             style={{ objectFit: "contain", margin: 0, padding: 0 }}
           /> */}
           <p className="text-xs text-gray-400">©2025 askusStudio. All rights reserved.</p>

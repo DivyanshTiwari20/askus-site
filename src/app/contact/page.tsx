@@ -88,7 +88,7 @@ export default function Contact() {
                   <b>Transforming ideas</b> into impactful <b>digital solutions</b>, we tailor every project to <b>elevate your brand</b> and connect with your audience effectively.
                 </p>
                 <p className="text-base font-manrope mb-8 text-gray-700">
-                  At <b>ASKUS</b>, we partner with <b>visionary brands</b> that are hungry for <b>growth</b>. If you're driven by <b>ambition</b> and ready to <b>disrupt your industry</b>, let's build something <b>extraordinary</b> together.
+                  At <b>ASKUS</b>, we partner with <b>visionary brands</b> that are hungry for <b>growth</b>.
                 </p>
                 {/* Key Features Grid */}
                 <div className="grid sm:grid-cols-2 gap-6 mb-8">
@@ -117,9 +117,13 @@ export default function Contact() {
                     <div className="w-2 h-2 bg-violet-700 rounded-full mt-2 flex-shrink-0"></div>
                     <div>
                       <h4 className="font-semibold text-gray-900 font-jakarta">24/7 Support</h4>
-                      <p className="text-sm text-gray-600 font-manrope">Dedicated support team ensuring your success at every step of the way.</p>
+                      <p className="text-sm text-gray-600 font-manrope">Dedicated support team ensuring your success at every step of the way. <p>Contat us :</p>
+                        <b>+91-8009227002<br />askusstudio@gmail.com</b>
+                      </p>
                     </div>
                   </div>
+                 
+                
                 </div>
                 {/* Stats Section */}
                 {/* <div className="grid grid-cols-3 gap-4 mb-8 p-6 bg-violet-50/50 rounded-2xl border border-violet-100">
@@ -154,7 +158,7 @@ export default function Contact() {
                 </div>
                 <div className="space-y-6">
                   <div className="grid sm:grid-cols-2 gap-6">
-                    {/* Name and Email */}
+                    {/* Name and E   */}
                     <div className="relative">
                       <User className="absolute left-4 top-4 w-5 h-5 text-gray-400" />
                       <input

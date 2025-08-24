@@ -212,7 +212,7 @@ const Footer: React.FC = () => {
             className="h-12  w-auto m-0 p-0"
             style={{ objectFit: "contain", margin: 0, padding: 0 }}
           /> */}
-          <p className="text-xs text-gray-400">©2025 askusStudio. All rights reserved.</p>
+          <p className="text-xs text-gray-400">©2025 askusStudio. All rights reserved. </p>
         </div>
       </div>
     </div>

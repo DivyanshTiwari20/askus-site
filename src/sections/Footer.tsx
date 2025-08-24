@@ -68,13 +68,12 @@ const Footer: React.FC = () => {
   };
 
   const footerLinks = {
-    Features: [
-      'Creative solutions',
-      'Results-driven strategies',
-      'Personalized client support',
-      'Cutting-edge technology',
-      'Growth-focused mindset',
-      'Affordable pricing'
+    Legal: [
+      { label: 'Refund & Cancellation', href: '/cancellation-refund' },
+      { label: 'Terms & Conditions', href: '/terms' },
+      { label: 'Privacy Policy', href: '/privacy-policy' },
+      { label: 'Shipping Policy', href: '/shipping-policy' },
+      { label: 'Contact', href: '/contact' },
     ],
     Services: [
       { label: 'Video Production', href: '/services/video-production' },

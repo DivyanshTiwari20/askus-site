@@ -122,7 +122,7 @@ const Footer: React.FC = () => {
               <img
                 src="/logoo.png"
                 alt="Askus Logo"
-                className="h-20 w-auto mb-8"
+                className="h-[120px] w-auto mb-8"
                 style={{ objectFit: 'contain' }}
               />
               {/* <h3 className="text-3xl font-bold mb-8">.Askus</h3> */}
@@ -207,12 +207,12 @@ const Footer: React.FC = () => {
       {/* Bottom Bar */}
       <div className="bg-black text-white">
         <div className="max-w-6xl mx-auto px-6 py-2 flex flex-row items-center justify-center gap-3">
-          <img
+          {/* <img
             src="/logoo.png"
             alt="Askus Studio Logo"
-            className="h-12  w-auto m-0 p-0"
+            className="h-[60px] w-auto mb-8"
             style={{ objectFit: "contain", margin: 0, padding: 0 }}
-          />
+          /> */}
           <p className="text-xs text-gray-400">©2025 askusStudio. All rights reserved.</p>
         </div>
       </div>

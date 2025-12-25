@@ -152,7 +152,7 @@ const Navbar = () => {
               className="hidden xs:inline-flex text-white text-xs sm:text-sm lg:text-base"
               onClick={() => { window.location.href = '/contact'; }}
             >
-              <span>Book a Demo</span>
+              <span>Book a Call</span>
               <motion.div
                 className="ml-2"
                 whileHover={{ x: 2, y: -2 }}

@@ -1,4 +1,5 @@
 import "./globals.css";
+import FloatingCallButton from "@/components/FloatingCallButton";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -86,7 +87,10 @@ export default function RootLayout({
           content="dZ2JDPPVn7g5XSHSsRr2Z5FRnWPlobQ6WWHI18HtL3w"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <FloatingCallButton />
+      </body>
     </html>
   );
 }

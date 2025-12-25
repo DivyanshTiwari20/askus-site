@@ -1,63 +1,74 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import CursorAura from "@/components/CursorAura";
-import { Analytics } from "@vercel/analytics/next";
-import Navbar from "@/components/Navbar";
-import Footer from "@/sections/Footer";
 
 export const metadata: Metadata = {
-  title: "Askus | Web Development, Marketing & Social Media Services for Startups",
-  description:
-    "Askus is a dynamic startup agency specializing in web development, digital marketing, and social media marketing services tailored for innovative startups. Think Digital. Think Bold.",
-  keywords:
-    "web development, digital marketing, social media marketing, startup agency, web services, marketing for startups, startup marketing, web design, SEO services, content marketing",
-  authors: [{ name: "Askus Team" }],
-  viewport: "width=device-width, initial-scale=1",
-  robots: "index, follow",
-  icons: {
-    icon: "/favicon.ico", // This will correctly use the favicon from the public folder
+  metadataBase: new URL("https://www.askusstudio.in"),
+
+  title: {
+    default:
+      "Askus Studio | Digital Agency for Startups in India",
+    template:
+      "%s | Askus Studio – Digital Agency for Startups",
   },
+
+  description:
+    "Askus Studio is a premium digital agency in India helping startups and small businesses grow with high-impact digital marketing, SEO, social media marketing, and scalable web development services.",
+
+  keywords: [
+    "digital agency for startups",
+    "digital marketing agency india",
+    "web development agency india",
+    "seo services for startups",
+    "social media marketing agency",
+    "startup marketing agency",
+  ],
+
+  authors: [{ name: "Askus Studio" }],
+  creator: "Askus Studio",
+  publisher: "Askus Studio",
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+
+  alternates: {
+    canonical: "https://www.askusstudio.in",
+  },
+
   openGraph: {
-    title: "Askus | Web Development, Marketing & Social Media Services for Startups",
+    title: "Askus Studio | Digital Agency for Startups in India",
     description:
-      "Askus is a dynamic startup agency specializing in web development, digital marketing, and social media marketing services tailored for innovative startups. Think Digital. Think Bold.",
-    url: "https://askus.co.in/", // Replace with your actual domain
-    siteName: "Askus",
+      "We help startups and growing businesses scale with performance-driven digital marketing, SEO, social media, and web development.",
+    url: "https://www.askusstudio.in",
+    siteName: "Askus Studio",
     images: [
       {
-        url: "/og-image.jpg", // Add an optimized OG image (1200x630 recommended) to your public folder
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Askus - Think Digital. Think Bold.",
+        alt: "Askus Studio – Digital Agency for Startups",
       },
     ],
-    locale: "en_US",
+    locale: "en_IN",
     type: "website",
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Askus | Web Development, Marketing & Social Media Services for Startups",
+    title: "Askus Studio | Digital Agency for Startups",
     description:
-      "Askus is a dynamic startup agency specializing in web development, digital marketing, and social media marketing services tailored for innovative startups. Think Digital. Think Bold.",
-    images: ["/twitter-image.jpg"], // Add a Twitter-optimized image (1200x675 recommended) to your public folder
-    creator: "@askus", // Replace with your actual Twitter handle
+      "Premium digital agency in India helping startups grow with marketing, SEO, and web development.",
+    images: ["/twitter-image.jpg"],
+  },
+
+  icons: {
+    icon: "/favicon.ico",
   },
 };
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en">
-      <body className="overflow-x-hidden">
-        <CursorAura />
-        <Navbar />
-        {children}
-        <Footer />
-        <Analytics />
-      </body>
-    </html>
-  );
-}

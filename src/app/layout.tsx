@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.askusstudio.in"),
 
   verification: {
-    google: "oElveCGm8AfKXlLcd0z7Z_yG582AdiqoE3sS0ZIuvYQ",
+    google: "dZ2JDPPVn7g5XSHSsRr2Z5FRnWPlobQ6WWHI18HtL3w",
   },
 
   title: {

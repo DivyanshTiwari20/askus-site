@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: "Askus | Premier Startup Agency for Web Development & Digital Marketing",
     description:
       "Discover Askus, your trusted startup agency for innovative web development, digital marketing, and social media marketing solutions. Empower your startup with bold digital strategies.",
-    url: "https://askus.co.in", // Replace with your actual domain
+    url: "https://askusstudio.in/", // Replace with your actual domain
     siteName: "Askus",
     images: [
       {

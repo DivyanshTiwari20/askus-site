@@ -1,13 +1,8 @@
 import "./globals.css";
-
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.askusstudio.in"),
-
-  verification: {
-    google: "dZ2JDPPVn7g5XSHSsRr2Z5FRnWPlobQ6WWHI18HtL3w",
-  },
 
   title: {
     default: "Askus Studio | Digital Agency for Startups in India",
@@ -84,6 +79,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        {/* Hardcoded Google verification meta tag */}
+        <meta
+          name="google-site-verification"
+          content="oElveCGm8AfKXlLcd0z7Z_yG582AdiqoE3sS0ZIuvYQ"
+        />
+      </head>
       <body>{children}</body>
     </html>
   );

@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.askusstudio.in"),
 
   verification: {
-    google: "dZ2JDPPVn7g5XSHSsRr2Z5FRnWPlobQ6WWHI18HtL3w",
+    google: "oElveCGm8AfKXlLcd0z7Z_yG582AdiqoE3sS0ZIuvYQ",
   },
 
   title: {
@@ -73,8 +73,16 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
-
-  other: {
-    "google-site-verification": "oElveCGm8AfKXlLcd0z7Z_yG582AdiqoE3sS0ZIuvYQ",
-  },
 };
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  );
+}

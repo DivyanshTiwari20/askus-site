@@ -3,11 +3,13 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.askusstudio.in"),
 
+  verification: {
+    google: "oElveCGm8AfKXlLcd0z7Z_yG582AdiqoE3sS0ZIuvYQ",
+  },
+
   title: {
-    default:
-      "Askus Studio | Digital Agency for Startups in India",
-    template:
-      "%s | Askus Studio – Digital Agency for Startups",
+    default: "Askus Studio | Digital Agency for Startups in India",
+    template: "%s | Askus Studio – Digital Agency for Startups",
   },
 
   description:
